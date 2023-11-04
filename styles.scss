@@ -1,0 +1,289 @@
+
+/* Box sizing rules */
+
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+.box{
+}
+.container{
+  width: 100%;
+  height: 100%;
+  background: var(--gray-600, #FAFAFA);
+padding: 104px;
+}
+
+.frame{
+ padding: 32px;
+ display: flex;
+ border-radius: 10px;
+ flex-direction: column;
+background: #FFF;
+box-shadow: 40px 40px 60px 0px rgba(0, 0, 0, 0.10);
+}
+
+.input_firstpart{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+.textform{
+
+}
+.textform label{
+  color: #130F1C;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  
+}
+.textform input, .passwordform input{
+  width: 100%;
+padding: 12px 14px 12px 12px;
+gap: 10px;
+align-self: stretch;
+color: #BAB9BD;
+font-size: 14px;
+font-family: Roboto Condensed;
+font-weight: 400;
+line-height: 24px;
+word-wrap: break-word;
+background: #FAFAFA;
+ border-radius: 5px ; 
+ border: none;
+}
+
+
+.passwordform{
+
+}
+
+.passwordform label{
+  color: #130F1C;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.passwordform input{
+
+}
+
+.switch_group{
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+
+h3{
+  color: #484848;
+font-size: 14px;
+font-family: Inter;
+font-weight: 400;
+line-height: 20px;
+word-wrap: break-word;
+padding-left: 8px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  align-content:  center;
+  width: 28px;
+  height: 16px;
+  padding-top: 2px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:#E9E9E9;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #FD7918;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(8px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.button{
+  margin-top: 32px;
+  width: 268px; height: 100%; 
+   background: #651FFF; border-radius: 5px;
+    overflow: hidden; flex-direction: column; 
+   justify-content: flex-start; align-items: center; 
+   gap: 10px; display: inline-flex; color: white;
+}
+
+.button:hover{
+  background:aquamarine;
+  color: black;
+}
+
+
+h2{
+ 
+font-size: 14px;
+font-family: 'Roboto', sans-serif;
+font-weight: 400;
+line-height: 24px;
+word-wrap: break-word;
+ padding-left: 48px; padding-right: 48px; 
+  padding-top: 5px; padding-bottom: 5px;
+}
+
+.forgotpassword{
+  color: #651FFF;
+  font-size: 16px;
+  font-family: Roboto Condensed;
+  font-weight: 400;
+  text-decoration: underline;
+  line-height: 24px;
+  word-wrap: break-word;
+  padding-top: 32px;
+  align-self: center;
+}
+.rectangle{
+  height: 2px;
+margin-top: 32px;
+margin-bottom: 32px;
+  background: #ECECEE; 
+ 
+}
+
+.icons{
+  display: flex;
+  flex-direction: column;
+}
+h1{
+  text-align: center; 
+  color: #5A5761; 
+  font-size: 16px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400; 
+   line-height: 24px; 
+   margin-bottom: 16px;
+}
+.buttons {
+flex-wrap: wrap;
+flex-direction: row;
+}
+
+.google, .facebook{
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: white; 
+  border-radius: 5px;
+   overflow: hidden; 
+   border: 1px #ECECEE solid; 
+   justify-content: space-between;
+}
+.facebook{
+  margin-left: 16px;
+}
